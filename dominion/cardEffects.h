@@ -9,3 +9,5 @@ int stewardEffect(struct gameState *state, int handPos, int choice1, int choice2
 int ambassadorEffect(struct gameState *state, int handPos, int choice1, int choice2);
 int embargoEffect(struct gameState *state, int handPos, int choice1);
 int minionEffect(struct gameState *state, int handPos, int choice1, int choice2);
+
+#endif
