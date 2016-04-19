@@ -971,6 +971,14 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case embargo:
       return embargoEffect(state, handPos, choice1);
 
+    case outpost:
+        //set outpost flag
+        state->outpostPlayed++;
+
+        //discard card
+        discardCard(handPos, state->whoseTurn, state, 0);
+        return 0;
+
     case salvager:
       //+1 buy
       state->numBuys++;
