@@ -1,0 +1,7 @@
+I started by creating separate files, cardEffects.c and cardEffects.h, and properly
+adding the 5 functions into the files. I looked at dominion.c's cardEfect function,
+cut the 5 cards I would use from each case, and pasted them individually into the
+separate functions in cardEffects.c. In each function's signature, I made sure to
+include the variables from dominion.c that the functions would need, and added calls 
+to the new;y created functions in dominion.c, passing variables from one place to
+another.
