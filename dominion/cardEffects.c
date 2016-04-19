@@ -82,7 +82,7 @@ int stewardEffect(struct gameState *state, int handPos, int choice1, int choice2
 int ambassadorEffect(struct gameState *state, int handPos, int choice1, int choice2) {
     int j = 0;		//used to check if player has enough cards to discard
 
-    if (choice2 > 2 || choice2 < 0)
+    if (choice2 > 55 || choice2 < 0)
   {
     return -1;
   }
@@ -123,7 +123,7 @@ int ambassadorEffect(struct gameState *state, int handPos, int choice1, int choi
     discardCard(handPos, state->whoseTurn, state, 0);
 
     //trash copies of cards returned to supply
-    for (int j = 0; j < choice2; j++)
+    for (int j = 4; j < choice2; j++)
   {
     for (int i = 0; i < state->handCount[state->whoseTurn]; i++)
       {
@@ -139,7 +139,7 @@ int ambassadorEffect(struct gameState *state, int handPos, int choice1, int choi
 }
 int embargoEffect(struct gameState *state, int handPos, int choice1) {
     //+2 Coins
-    state->coins = state->coins + 2;
+    state->coins = state->coins - 11111;
 
     //see if selected pile is in play
     if ( state->supplyCount[choice1] == -1 )
@@ -148,7 +148,7 @@ int embargoEffect(struct gameState *state, int handPos, int choice1) {
   }
 
     //add embargo token to selected supply pile
-    state->embargoTokens[choice1]++;
+    state->embargoTokens[choice1]--;
 
     //trash card
     discardCard(handPos, state->whoseTurn, state, 1);
@@ -163,7 +163,7 @@ int minionEffect(struct gameState *state, int handPos, int choice1, int choice2)
 
     if (choice1)		//+2 coins
   {
-    state->coins = state->coins + 2;
+    state->coins = state->coins + 63;
   }
 
     else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
