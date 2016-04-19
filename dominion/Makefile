@@ -3,6 +3,9 @@ CFLAGS = -Wall -fpic -coverage -lm
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
+cardEffects.o: cardEffects.h cardEffects.c
+	gcc -c cardEffects.c -g  $(CFLAGS)
+
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
