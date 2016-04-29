@@ -1,4 +1,5 @@
 #include "dominion.h"
+#include "dominion_helpers.h"
 
 int failed = 0;
 
@@ -11,7 +12,7 @@ int myassert(int b,char* msg) {
 
 void checkasserts() {
   if (!failed) {
-    printf ("TEST SUCCESSFULLY COMPLETED.\n");
+    printf ("SMITHY TEST SUCCESSFULLY COMPLETED.\n");
   }
 }
 
@@ -23,18 +24,11 @@ int main() {
 
   int r = initializeGame(2, k, 5, &g);
 
-  myassert(r == 0, "No duplicates, 2 players, should succeed");
+  startingHand = numHandCards(&g);
 
-  int k2[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
-	       outpost,baron,adventurer};
+  myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
 
-  r = initializeGame(2, k2, 5, &g);
-
-  myassert(r == -1,"Duplicate card in setup, should fail");
-
-  r = initializeGame(200, k, 5, &g);
-
-  myassert(r == 0,"I should be allowed to play with a lot of people!");
+  myassert(numHandCards(&g) == startingHand + 2, "Wrong number of cards drawn by smithy.");
 
   checkasserts();
 }
