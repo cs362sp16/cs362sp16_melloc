@@ -1,8 +1,11 @@
 #include "dominion.h"
+#include "dominion_helpers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int failed = 0;
 
-int myassert(int b,char* msg) {
+void myassert(int b,char* msg) {
   if (b == 0) {
     printf("FAILED ASSERTION: %s\n",msg);
     failed = 1;
@@ -11,30 +14,29 @@ int myassert(int b,char* msg) {
 
 void checkasserts() {
   if (!failed) {
-    printf ("TEST SUCCESSFULLY COMPLETED.\n");
+    printf ("MINION TEST SUCCESSFULLY COMPLETED.\n");
   }
 }
 
 int main() {
   struct gameState g;
 
-  int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
+  int k[10] = {minion,adventurer,gardens,embargo,cutpurse,mine,ambassador,
 	       outpost,baron,tribute};
 
-  int r = initializeGame(2, k, 5, &g);
+  initializeGame(2, k, 5, &g);
 
-  myassert(r == 0, "No duplicates, 2 players, should succeed");
+  int startingCoins = g.coins;
 
-  int k2[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
-	       outpost,baron,adventurer};
+  myassert(cardEffect(minion, 1, 0, 0, &g, 0, 0), "Minion returned the wrong value.");
 
-  r = initializeGame(2, k2, 5, &g);
+  myassert(g.coins == startingCoins + 2, "Wrong number of coins gained by minion.");
 
-  myassert(r == -1,"Duplicate card in setup, should fail");
+  initializeGame(2, k, 5, &g);
 
-  r = initializeGame(200, k, 5, &g);
+  myassert(cardEffect(minion, 0, 1, 0, &g, 0, 0), "Minion returned the wrong value.");
 
-  myassert(r == 0,"I should be allowed to play with a lot of people!");
+  myassert(numHandCards(&g) == 4, "Wrong number of cards redrawn by minion.");
 
   checkasserts();
 }

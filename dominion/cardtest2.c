@@ -14,7 +14,7 @@ void myassert(int b,char* msg) {
 
 void checkasserts() {
   if (!failed) {
-    printf ("TEST SUCCESSFULLY COMPLETED.\n");
+    printf ("STEWARD TEST SUCCESSFULLY COMPLETED.\n");
   }
 }
 
@@ -36,7 +36,7 @@ int main() {
 
   int startingCoins = g.coins;
 
-  cardEffect(steward, 2, 0, 0, &g, 0, 0);
+  myassert(cardEffect(steward, 2, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
 
   myassert(g.coins == startingCoins + 2, "Wrong number of coins gained by steward.");
 
@@ -44,7 +44,7 @@ int main() {
 
   startingHand = numHandCards(&g);
 
-  cardEffect(steward, 3, 1, 2, &g, 0, 0);
+  myassert(cardEffect(steward, 3, 1, 2, &g, 0, 0), "Steward returned the wrong value.");
 
   myassert(numHandCards(&g) == startingHand - 3, "Wrong number of cards discarded by steward.");
 
