@@ -30,7 +30,7 @@ int main() {
 
   myassert(cardEffect(steward, 1, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
 
-  myassert(numHandCards(&g) == numHandCards + 2, "Wrong number of cards drawn by steward.")
+  myassert(numHandCards(&g) == startingHand + 2, "Wrong number of cards drawn by steward.");
 
   initializeGame(2, k, 5, &g);
 
@@ -38,7 +38,7 @@ int main() {
 
   cardEffect(steward, 2, 0, 0, &g, 0, 0);
 
-  myassert(g.coins == startingCoins + 2), "Wrong number of coins gained by steward.");
+  myassert(g.coins == startingCoins + 2, "Wrong number of coins gained by steward.");
 
   initializeGame(2, k, 5, &g);
 
@@ -46,7 +46,7 @@ int main() {
 
   cardEffect(steward, 3, 1, 2, &g, 0, 0);
 
-  myassert(numHandCards(&g) == numHandCards - 3, "Wrong number of cards discarded by steward.")
+  myassert(numHandCards(&g) == startingHand - 3, "Wrong number of cards discarded by steward.");
 
   checkasserts();
 }
