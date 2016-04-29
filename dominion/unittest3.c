@@ -14,7 +14,7 @@ void myassert(int b,char* msg) {
 
 void checkasserts() {
   if (!failed) {
-    printf ("NUMHANDCARDS TEST SUCCESSFULLY COMPLETED.\n");
+    printf ("DRAWCARD TEST SUCCESSFULLY COMPLETED.\n");
   }
 }
 
@@ -26,9 +26,9 @@ int main() {
 
   initializeGame(2, k, 5, &g);
 
-  int actualHandCount = g.handCount[ whoseTurn(&g) ];
+  int initialHand = numHandCards(&g);
 
-  myassert(numHandCards(&g) == actualHandCount, "numHandCount function returned the wrong value.");
+  myassert(numHandCards(&g) == initialHand + 1, "drawCard function did not return +1 card.");
 
   checkasserts();
 }
