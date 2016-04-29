@@ -1,0 +1,6 @@
+I found an innumerable amount of bugs when doing my unit tests in this
+assignment. As it turns out, the myassert function from asimpleunittest.c works
+in a way I didn't entirely comprehend, and all of my asserts failed on the card
+unit tests. This includes ones I didn't deliberately add bugs to. On the
+regular function unit tests, everything came out fine but the isGameOver
+function, which somehow returned a game over on the initialized game.

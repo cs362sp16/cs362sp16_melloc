@@ -19,6 +19,7 @@ Lines executed:22.04% of 540
 dominion.c:creating 'dominion.c.gcov'
 
 FAILED ASSERTION: Smithy returned the wrong value.
+FAILED ASSERTION: Wrong number of cards drawn by smithy.
 File 'dominion.c'
 Lines executed:24.63% of 540
 dominion.c:creating 'dominion.c.gcov'

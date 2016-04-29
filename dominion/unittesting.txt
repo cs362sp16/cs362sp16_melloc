@@ -1,0 +1,6 @@
+All in all, I discovered doing this assignment that unit testing itself requires
+just as much if not more concerted effort than actually writing the initial
+code. I didn't spend near enough time creating and testing the tests, so almost
+all of the hours I spent working on unit testing plumb failed. I'm going to
+work hard to take what I learned from this assignment and apply it to having a
+much better rest of my term.

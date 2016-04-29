@@ -30,7 +30,7 @@ int main() {
 
   myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
 
-  myassert(numHandCards(&g) == startingHand + 2, "Wrong number of cards drawn by smithy.");
+  myassert(numHandCards(&g) == startingHand + 3, "Wrong number of cards drawn by smithy.");
 
   checkasserts();
 }
