@@ -14,7 +14,7 @@ void myassert(int b,char* msg) {
 
 void checkasserts() {
   if (!failed) {
-    printf ("NUMHANDCARDS TEST SUCCESSFULLY COMPLETED.\n");
+    printf ("ISGAMEOVER TEST SUCCESSFULLY COMPLETED.\n");
   }
 }
 
@@ -26,9 +26,19 @@ int main() {
 
   initializeGame(2, k, 5, &g);
 
-  int actualHandCount = g.handCount[ whoseTurn(&g) ];
+  myassert(isGameOver(&g), "isGameOver returned game over on start.");
 
-  myassert(numHandCards(&g) == actualHandCount, "numHandCount function returned the wrong value.");
+  g.supplyCount[province] = 0;
+
+  myassert(isGameOver(&g), "isGameOver didn't account for 0 provinces");
+
+  g.supplyCount[province] = 1;
+
+  g.supplyCount[0] = 0;
+  g.supplyCount[1] = 0;
+  g.supplyCount[2] = 0;
+
+  myassert(isGameOver(&g), "isGameOver didn't account for 3 empty supply decks");
 
   checkasserts();
 }

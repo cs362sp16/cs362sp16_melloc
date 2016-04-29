@@ -28,6 +28,8 @@ int main() {
 
   int initialHand = numHandCards(&g);
 
+  drawCard(g.whoseTurn, &g);
+
   myassert(numHandCards(&g) == initialHand + 1, "drawCard function did not return +1 card.");
 
   checkasserts();
