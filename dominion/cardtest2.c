@@ -1,4 +1,7 @@
 #include "dominion.h"
+#include "dominion_helpers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int failed = 0;
 
@@ -18,23 +21,32 @@ void checkasserts() {
 int main() {
   struct gameState g;
 
-  int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
+  int k[10] = {steward,adventurer,gardens,embargo,cutpurse,mine,ambassador,
 	       outpost,baron,tribute};
 
-  int r = initializeGame(2, k, 5, &g);
+  initializeGame(2, k, 5, &g);
 
-  myassert(r == 0, "No duplicates, 2 players, should succeed");
+  int startingHand = numHandCards(&g);
 
-  int k2[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
-	       outpost,baron,adventurer};
+  myassert(cardEffect(steward, 1, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
 
-  r = initializeGame(2, k2, 5, &g);
+  myassert(numHandCards(&g) == numHandCards + 2, "Wrong number of cards drawn by steward.")
 
-  myassert(r == -1,"Duplicate card in setup, should fail");
+  initializeGame(2, k, 5, &g);
 
-  r = initializeGame(200, k, 5, &g);
+  int startingCoins = g.coins;
 
-  myassert(r == 0,"I should be allowed to play with a lot of people!");
+  cardEffect(steward, 2, 0, 0, &g, 0, 0);
+
+  myassert(g.coins == startingCoins + 2), "Wrong number of coins gained by steward.");
+
+  initializeGame(2, k, 5, &g);
+
+  startingHand = numHandCards(&g);
+
+  cardEffect(steward, 3, 1, 2, &g, 0, 0);
+
+  myassert(numHandCards(&g) == numHandCards - 3, "Wrong number of cards discarded by steward.")
 
   checkasserts();
 }

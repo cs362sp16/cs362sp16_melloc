@@ -1,5 +1,7 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int failed = 0;
 
@@ -22,9 +24,9 @@ int main() {
   int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
 	       outpost,baron,tribute};
 
-  int r = initializeGame(2, k, 5, &g);
+  initializeGame(2, k, 5, &g);
 
-  startingHand = numHandCards(&g);
+  int startingHand = numHandCards(&g);
 
   myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
 
