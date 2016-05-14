@@ -62,30 +62,30 @@ myTestRandom:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c cardEffects.c -o randomtestcard1 -lm -g
 	./randomtestcard1 42 > randomtestcard1.out
-	gcov dominion.c >> randomtestcard1.out
+	gcov -f cardEffects.c >> randomtestcard1.out
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c cardEffects.c -o randomtestcard2 -lm -g
 	./randomtestcard2 42 > randomtestcard2.out
-	gcov dominion.c >> randomtestcard2.out
+	gcov -f cardEffects.c >> randomtestcard2.out
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
 	./randomtestadventurer 42 > randomtestadventurer.out
-	gcov dominion.c >> randomtestadventurer.out
+	gcov -f cardEffects.c >> randomtestadventurer.out
 
 myTestRandom1:
-	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	rm -f cardEffects.c.gcov cardEffects.gcda cardEffects.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c cardEffects.c -o randomtestcard1 -lm -g
 	./randomtestcard1 42 > randomtestcard1.out
-	gcov dominion.c >> randomtestcard1.out
+	gcov -f cardEffects.c >> randomtestcard1.out
 
 myTestRandom2:
-	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	rm -f cardEffects.c.gcov cardEffects.gcda cardEffects.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c cardEffects.c -o randomtestcard2 -lm -g
 	./randomtestcard2 42 > randomtestcard2.out
-	gcov dominion.c >> randomtestcard2.out
+	gcov -f cardEffects.c >> randomtestcard2.out
 
 myTestRandomAdv:
-	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	rm -f cardEffects.c.gcov cardEffects.gcda cardEffects.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
 	./randomtestadventurer 42 > randomtestadventurer.out
-	gcov dominion.c >> randomtestadventurer.out
+	gcov -f cardEffects.c >> randomtestadventurer.out
