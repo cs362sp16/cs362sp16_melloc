@@ -1,4 +1,4 @@
-CFLAGS = -Wall -fpic -coverage -lm
+CFLAGS = -Wall -fpic -coverage -lm -std=c11
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -61,13 +61,31 @@ myTest:
 myTestRandom:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c cardEffects.c -o randomtestcard1 -lm -g
-	./randomtestcard1 1 >> randomtestcard1.out
+	./randomtestcard1 42 > randomtestcard1.out
 	gcov dominion.c >> randomtestcard1.out
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c cardEffects.c -o randomtestcard2 -lm -g
-	./randomtestcard2 1 >> randomtestcard2.out
+	./randomtestcard2 42 > randomtestcard2.out
 	gcov dominion.c >> randomtestcard2.out
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
-	./randomtestadventurer 1 >> randomtestadventurer.out
+	./randomtestadventurer 42 > randomtestadventurer.out
+	gcov dominion.c >> randomtestadventurer.out
+
+myTestRandom1:
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c cardEffects.c -o randomtestcard1 -lm -g
+	./randomtestcard1 42 > randomtestcard1.out
+	gcov dominion.c >> randomtestcard1.out
+
+myTestRandom2:
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c cardEffects.c -o randomtestcard2 -lm -g
+	./randomtestcard2 42 > randomtestcard2.out
+	gcov dominion.c >> randomtestcard2.out
+
+myTestRandomAdv:
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
+	./randomtestadventurer 42 > randomtestadventurer.out
 	gcov dominion.c >> randomtestadventurer.out

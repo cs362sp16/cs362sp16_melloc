@@ -19,15 +19,22 @@ void checkasserts() {
 }
 
 int main(int argc, char *argv[]) {
-        srand((int)argv[1]);
+        srand(atoi(argv[1]));
 
         struct gameState g;
 
         int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
                      outpost,baron,tribute};
 
-        initializeGame(2, k, 5, &g);
+        int numPlayers = rand() % MAX_PLAYERS;
+        int seed = atoi(argv[1]);
 
+        initializeGame(numPlayers, k, seed, &g);
+
+        g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+        g.handCount[g.whoseTurn] = rand() % MAX_HAND;
+
+        // int startingDeck = g.deckCount[g.whoseTurn];
         int startingHand = numHandCards(&g);
 
         myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
