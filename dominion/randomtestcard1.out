@@ -598,7 +598,28 @@ FAILED ASSERTION: Smithy returned the wrong value.
 FAILED ASSERTION: Wrong number of cards drawn by smithy.
 FAILED ASSERTION: Smithy returned the wrong value.
 FAILED ASSERTION: Wrong number of cards drawn by smithy.
-File 'dominion.c'
-Lines executed:24.71% of 522
-dominion.c:creating 'dominion.c.gcov'
+Function 'baronEffect'
+Lines executed:0.00% of 36
+
+Function 'stewardEffect'
+Lines executed:0.00% of 11
+
+Function 'ambassadorEffect'
+Lines executed:0.00% of 28
+
+Function 'embargoEffect'
+Lines executed:0.00% of 7
+
+Function 'minionEffect'
+Lines executed:0.00% of 24
+
+Function 'smithyEffect'
+Lines executed:100.00% of 5
+
+Function 'adventurerEffect'
+Lines executed:0.00% of 15
+
+File 'cardEffects.c'
+Lines executed:3.97% of 126
+cardEffects.c:creating 'cardEffects.c.gcov'
 
