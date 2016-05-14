@@ -1,0 +1,42 @@
+So, this assignment proved to be quite an interesting adventure. As it turned
+out, it wasn't terribly hard to achieve 100% coverage on not just one card that
+I worked on, but I actually managed two of them. My randomtestcard1 was the
+smithy card from Dominion and my randomtestcard2 was the steward. Both cards
+achieved 100% coverage in their respective tests, even on one pass through,
+I ran 300 passes of random data just to be safe.
+
+After randomtestcard1:
+
+    Function 'smithyEffect'
+    Lines executed:100.00% of 5
+
+After randomtestcard2:
+
+    Function 'stewardEffect'
+    Lines executed:100.00% of 11
+
+On the other hand, though, I had issues achieving 100% coverage on
+randomtestadventurer. I believe this had to do with the fact I was never
+operating on an empty deck in any of my random tests done on the card effect.
+
+After randomtestadventurer:
+
+    Function 'adventurerEffect'
+    Lines executed:86.67% of 15
+
+In contrast to the original non-random unit tests, on the cards I tested before,
+I actually got the same results.
+
+    Function 'smithyEffect'
+    Lines executed:100.00% of 5
+
+    Function 'stewardEffect'
+    Lines executed:100.00% of 11
+
+I imagine the random testing would do a good job detecting some wild faults on
+certain cards, but the regular unit testing seems to serve just fine if the
+cards are simple enough, such as with the steward or smithy.
+
+As for fault detection... Both testing methods came out with faults, but with
+random testing, I was able to generate a lot more a heck of a lot faster! See
+my output for reference on that!
