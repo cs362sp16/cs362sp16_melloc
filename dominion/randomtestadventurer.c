@@ -18,19 +18,36 @@ void checkasserts() {
         }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+        srand(atoi(argv[1]));
         struct gameState g;
 
         int k[10] = {smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,
                      outpost,baron,tribute};
 
-        initializeGame(2, k, 5, &g);
+        int numPlayers = rand() % MAX_PLAYERS;
+        int seed = atoi(argv[1]);
 
-        int startingHand = numHandCards(&g);
+        int numTests = 300;
 
-        myassert(cardEffect(adventurer, 0, 0, 0, &g, 0, 0), "Adventurer returned the wrong value.");
+        for(int i = 0; i < numTests; i++) {
+                initializeGame(numPlayers, k, seed, &g);
 
-        myassert(numHandCards(&g) == startingHand + 3, "Wrong number of cards drawn by adventurer.");
+                g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                g.discardCount[g.whoseTurn] = rand() % MAX_DECK;
+                g.handCount[g.whoseTurn] = rand() % MAX_HAND;
+
+                int startingHand = numHandCards(&g);
+                int startingDeck = g.deckCount[g.whoseTurn];
+
+                myassert(cardEffect(adventurer, 0, 0, 0, &g, 0, 0), "Adventurer returned the wrong value.");
+
+                myassert(numHandCards(&g) == startingHand + 2, "Wrong number of treasure cards drawn by adventurer.");
+
+                myassert(g.deckCount[g.whoseTurn] == startingDeck - 2, "Wrong number of treasure cards taken from deck by adventurer.");
+
+                seed++;
+        }
 
         checkasserts();
 }

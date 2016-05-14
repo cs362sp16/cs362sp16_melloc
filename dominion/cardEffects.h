@@ -10,5 +10,6 @@ int ambassadorEffect(struct gameState *state, int handPos, int choice1, int choi
 int embargoEffect(struct gameState *state, int handPos, int choice1);
 int minionEffect(struct gameState *state, int handPos, int choice1, int choice2);
 int smithyEffect(struct gameState *state, int handPos);
+int adventurerEffect(struct gameState *state, int drawntreasure, int z, int *temphand);
 
 #endif

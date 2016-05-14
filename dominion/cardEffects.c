@@ -207,13 +207,35 @@ int minionEffect(struct gameState *state, int handPos, int choice1, int choice2)
 }
 
 int smithyEffect(struct gameState *state, int handPos) {
-  //+3 Cards
-  for (int i = 0; i < 3; i++)
-  {
-          drawCard(state->whoseTurn, state);
-  }
+        //+3 Cards
+        for (int i = 0; i < 3; i++)
+        {
+                drawCard(state->whoseTurn, state);
+        }
 
-  //discard card from hand
-  discardCard(handPos, state->whoseTurn, state, 0);
-  return 0;
+        //discard card from hand
+        discardCard(handPos, state->whoseTurn, state, 0);
+        return 0;
+}
+
+int adventurerEffect(struct gameState *state, int drawntreasure, int z, int *temphand) {
+        while(drawntreasure<2) {
+                if (state->deckCount[state->whoseTurn] <1) {//if the deck is empty we need to shuffle discard and add to deck
+                        shuffle(state->whoseTurn, state);
+                }
+                drawCard(state->whoseTurn, state);
+                int cardDrawn = state->hand[state->whoseTurn][state->handCount[state->whoseTurn]-1];//top card of hand is most recently drawn card.
+                if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+                        drawntreasure++;
+                else{
+                        temphand[z]=cardDrawn;
+                        state->handCount[state->whoseTurn]--; //this should just remove the top card (the most recently drawn one).
+                        z++;
+                }
+        }
+        while(z-1>=0) {
+                state->discard[state->whoseTurn][state->discardCount[state->whoseTurn]++]=temphand[z-1]; // discard all cards in play that have been drawn
+                z=z-1;
+        }
+        return 0;
 }

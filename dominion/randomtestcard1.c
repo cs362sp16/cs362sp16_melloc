@@ -29,17 +29,23 @@ int main(int argc, char *argv[]) {
         int numPlayers = rand() % MAX_PLAYERS;
         int seed = atoi(argv[1]);
 
-        initializeGame(numPlayers, k, seed, &g);
+        int numTests = 300;
 
-        g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
-        g.handCount[g.whoseTurn] = rand() % MAX_HAND;
+        for(int i = 0; i < numTests; i++) {
+                initializeGame(numPlayers, k, seed, &g);
 
-        // int startingDeck = g.deckCount[g.whoseTurn];
-        int startingHand = numHandCards(&g);
+                g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                g.handCount[g.whoseTurn] = rand() % MAX_HAND;
 
-        myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
+                // int startingDeck = g.deckCount[g.whoseTurn];
+                int startingHand = numHandCards(&g);
 
-        myassert(numHandCards(&g) == startingHand + 3, "Wrong number of cards drawn by smithy.");
+                myassert(cardEffect(smithy, 0, 0, 0, &g, 0, 0), "Smithy returned the wrong value.");
+
+                myassert(numHandCards(&g) == startingHand + 3, "Wrong number of cards drawn by smithy.");
+
+                seed++;
+        }
 
         checkasserts();
 }
