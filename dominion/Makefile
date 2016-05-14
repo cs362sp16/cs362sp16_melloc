@@ -21,7 +21,7 @@ player: player.c interface.o
 all: playdom player
 
 clean:
-	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
 
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
@@ -57,3 +57,17 @@ myTest:
 	./cardtest4 1 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+myTestRandom:
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c cardEffects.c -o randomtestcard1 -lm -g
+	./randomtestcard1 1 >> randomtestcard1.out
+	gcov dominion.c >> randomtestcard1.out
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c cardEffects.c -o randomtestcard2 -lm -g
+	./randomtestcard2 1 >> randomtestcard2.out
+	gcov dominion.c >> randomtestcard2.out
+	rm -f dominion.c.gcov dominion.gcda dominion.gcno
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
+	./randomtestadventurer 1 >> randomtestadventurer.out
+	gcov dominion.c >> randomtestadventurer.out
