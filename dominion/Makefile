@@ -1,4 +1,4 @@
-CFLAGS = -Wall -fpic -coverage -lm -std=c11
+CFLAGS = -Wall -fpic -coverage -lm
 
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -89,3 +89,6 @@ myTestRandomAdv:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c cardEffects.c -o randomtestadventurer -lm -g
 	./randomtestadventurer 42 > randomtestadventurer.out
 	gcov -f cardEffects.c >> randomtestadventurer.out
+
+testDominion: dominion.o testdominion.c
+	
