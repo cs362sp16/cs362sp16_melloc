@@ -21,7 +21,7 @@ player: player.c interface.o
 all: playdom player
 
 clean:
-	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom testdominion test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
 
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
@@ -91,4 +91,4 @@ myTestRandomAdv:
 	gcov -f cardEffects.c >> randomtestadventurer.out
 
 testDominion: dominion.o testdominion.c
-	
+	gcc -o testdominion testdominion.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
