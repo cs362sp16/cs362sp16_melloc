@@ -44,7 +44,7 @@ randomtestcards: dominion.o randomtestcard1.c randomtestcard2.c randomtestcard3.
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c cardEffects.c -o unittest1 -lm -g
-	./unittest1 1 >> unittestresult.out
+	./unittest1 1 > unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest2.c rngs.c cardEffects.c -o unittest2 -lm -g
