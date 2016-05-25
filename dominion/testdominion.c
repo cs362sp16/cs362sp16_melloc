@@ -166,6 +166,7 @@ int main (int argc, char** argv) {
                                 }
                                 i++;
                         }
+                        printf("Player %d Gold: %d\n", e, money);
                 }
 
                 if (money >= 8) {
@@ -235,7 +236,7 @@ int main (int argc, char** argv) {
                 // }
 
                 for(e = 0; e < playerNum; e++) {
-                        printf("Player %d: %d\n", e, scoreFor(e, p));
+                        printf("Player %d Score: %d\n", e, scoreFor(e, p));
                 }
 
         } // end of While
