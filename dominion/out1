@@ -1,0 +1,769 @@
+Card 1: Embargo
+Card 2: Treasure Map
+Card 3: Outpost
+Card 4: Baron
+Card 5: Gardens
+Card 6: Salvager
+Card 7: Village
+Card 8: Cutpurse
+Card 9: Steward
+Card 10: Ambassador
+
+Starting game.
+Player 0 Card Obsession: Outpost
+Player 1 Card Obsession: Treasure Map
+Collision!
+Player 2 Card Obsession: Ambassador
+Collision!
+Player 3 Card Obsession: Embargo
+0: bought silver
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 2
+Player 2 Score: 0
+Player 3 Score: 0
+1: bought silver
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 4
+Player 2 Score: 1
+Player 3 Score: 0
+2: bought Ambassador
+2: end turn
+Player 0 Score: 4
+Player 1 Score: 4
+Player 2 Score: 3
+Player 3 Score: 2
+3: bought silver
+3: end turn
+Player 0 Score: 5
+Player 1 Score: 4
+Player 2 Score: 3
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 5
+Player 1 Score: 5
+Player 2 Score: 3
+Player 3 Score: 3
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 5
+Player 1 Score: 4
+Player 2 Score: 5
+Player 3 Score: 3
+2: bought silver
+2: end turn
+Player 0 Score: 5
+Player 1 Score: 4
+Player 2 Score: 6
+Player 3 Score: 4
+3: bought Embargo
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 4
+Player 2 Score: 6
+Player 3 Score: 5
+0: bought Outpost
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 6
+Player 3 Score: 5
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 2
+Player 3 Score: 5
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 3
+Player 2 Score: 2
+Player 3 Score: 0
+3: bought Embargo
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 3
+Player 2 Score: 2
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 5
+Player 1 Score: 3
+Player 2 Score: 2
+Player 3 Score: 3
+1: Treasure Map played from position 1
+Treasure Map played.
+Player 4 Gold: 4
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 5
+Player 1 Score: 5
+Player 2 Score: 3
+Player 3 Score: 3
+2: bought Ambassador
+2: end turn
+Player 0 Score: 5
+Player 1 Score: 5
+Player 2 Score: 6
+Player 3 Score: 5
+3: Embargo played from position 0
+Embargo played.
+Player 4 Gold: 2
+3: end turn
+Player 0 Score: 2
+Player 1 Score: 5
+Player 2 Score: 6
+Player 3 Score: 5
+0: Outpost played from position 2
+Outpost played.
+Player 4 Gold: 3
+0: bought silver
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 0
+Player 2 Score: 6
+Player 3 Score: 5
+1: bought gold
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 2
+Player 2 Score: 0
+Player 3 Score: 5
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 4
+2: bought Ambassador
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 2
+Player 2 Score: 2
+Player 3 Score: 1
+3: bought Embargo
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 2
+Player 2 Score: 2
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 5
+Player 1 Score: 3
+Player 2 Score: 2
+Player 3 Score: 3
+1: Treasure Map played from position 2
+Treasure Map played.
+Player 4 Gold: 2
+1: end turn
+Player 0 Score: 5
+Player 1 Score: 3
+Player 2 Score: 4
+Player 3 Score: 3
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 5
+Player 1 Score: 3
+Player 2 Score: 5
+Player 3 Score: 4
+3: Embargo played from position 2
+Embargo played.
+Player 4 Gold: 3
+3: bought silver
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 3
+Player 2 Score: 5
+Player 3 Score: 4
+0: bought Outpost
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 4
+Player 2 Score: 5
+Player 3 Score: 4
+1: bought province
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 1
+Player 3 Score: 4
+2: bought Ambassador
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 2
+Player 3 Score: 1
+3: Embargo played from position 3
+Embargo played.
+Player 4 Gold: 4
+3: bought Embargo
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 8
+Player 2 Score: 2
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 6
+Player 1 Score: 2
+Player 2 Score: 2
+Player 3 Score: 3
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 6
+Player 1 Score: 8
+Player 2 Score: 3
+Player 3 Score: 3
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 6
+Player 1 Score: 8
+Player 2 Score: 4
+Player 3 Score: 3
+3: bought gold
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 8
+Player 2 Score: 4
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 9
+Player 2 Score: 4
+Player 3 Score: 3
+1: bought province
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 16
+Player 2 Score: 2
+Player 3 Score: 3
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 2
+3: bought Embargo
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 3
+0: Outpost played from position 0
+Outpost played.
+Player 4 Gold: 3
+0: bought silver
+0: end turn
+Player 0 Score: 5
+Player 1 Score: 16
+Player 2 Score: 3
+Player 3 Score: 3
+1: bought province
+1: end turn
+Player 0 Score: 5
+Player 1 Score: 20
+Player 2 Score: 3
+Player 3 Score: 3
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 4
+2: bought Ambassador
+2: end turn
+Player 0 Score: 5
+Player 1 Score: 20
+Player 2 Score: 4
+Player 3 Score: 3
+3: Embargo played from position 0
+Embargo played.
+Player 4 Gold: 5
+3: bought Embargo
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 20
+Player 2 Score: 4
+Player 3 Score: 3
+0: bought Outpost
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 13
+Player 2 Score: 4
+Player 3 Score: 3
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 15
+Player 2 Score: 5
+Player 3 Score: 3
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 3
+2: bought silver
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 15
+Player 2 Score: 2
+Player 3 Score: 1
+3: Embargo played from position 4
+Embargo played.
+Player 4 Gold: 5
+3: bought Embargo
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 15
+Player 2 Score: 2
+Player 3 Score: 1
+0: bought Outpost
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 15
+Player 2 Score: 2
+Player 3 Score: 1
+1: bought gold
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 21
+Player 2 Score: 1
+Player 3 Score: 1
+2: bought Ambassador
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 21
+Player 2 Score: 2
+Player 3 Score: 3
+3: Embargo played from position 2
+Embargo played.
+Player 4 Gold: 2
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 21
+Player 2 Score: 2
+Player 3 Score: 5
+0: Outpost played from position 2
+Outpost played.
+Player 4 Gold: 4
+0: bought Outpost
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 27
+Player 2 Score: 2
+Player 3 Score: 5
+1: bought province
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 40
+Player 2 Score: 2
+Player 3 Score: 5
+2: Ambassador played from position 4
+Ambassador played.
+Player 4 Gold: 1
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 40
+Player 2 Score: 3
+Player 3 Score: 5
+3: bought gold
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 40
+Player 2 Score: 3
+Player 3 Score: 6
+0: Outpost played from position 4
+Outpost played.
+Player 4 Gold: 4
+0: bought Outpost
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 42
+Player 2 Score: 3
+Player 3 Score: 6
+1: Treasure Map played from position 3
+Treasure Map played.
+Player 4 Gold: 4
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 37
+Player 2 Score: 4
+Player 3 Score: 6
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 4
+2: bought Ambassador
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 37
+Player 2 Score: 5
+Player 3 Score: 2
+3: bought Embargo
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 37
+Player 2 Score: 5
+Player 3 Score: 2
+0: bought Outpost
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 1
+Player 2 Score: 5
+Player 3 Score: 2
+1: Treasure Map played from position 1
+Treasure Map played.
+Player 4 Gold: 7
+1: bought gold
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 2
+Player 3 Score: 2
+2: Ambassador played from position 4
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 2
+Player 3 Score: 3
+3: Embargo played from position 4
+Embargo played.
+Player 4 Gold: 6
+3: bought gold
+3: end turn
+Player 0 Score: 2
+Player 1 Score: 8
+Player 2 Score: 2
+Player 3 Score: 5
+0: Outpost played from position 2
+Outpost played.
+Player 4 Gold: 2
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 15
+Player 2 Score: 2
+Player 3 Score: 5
+1: Treasure Map played from position 2
+Treasure Map played.
+Player 4 Gold: 5
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 27
+Player 2 Score: 2
+Player 3 Score: 5
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 3
+2: bought silver
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 27
+Player 2 Score: 3
+Player 3 Score: 5
+3: bought gold
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 27
+Player 2 Score: 3
+Player 3 Score: 5
+0: bought gold
+0: end turn
+Player 0 Score: 3
+Player 1 Score: 33
+Player 2 Score: 3
+Player 3 Score: 5
+1: bought province
+1: end turn
+Player 0 Score: 3
+Player 1 Score: 46
+Player 2 Score: 4
+Player 3 Score: 5
+2: Ambassador played from position 4
+Ambassador played.
+Player 4 Gold: 3
+2: bought silver
+2: end turn
+Player 0 Score: 3
+Player 1 Score: 46
+Player 2 Score: 5
+Player 3 Score: 1
+3: bought gold
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 46
+Player 2 Score: 5
+Player 3 Score: 2
+0: Outpost played from position 0
+Outpost played.
+Player 4 Gold: 5
+0: bought Outpost
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 59
+Player 2 Score: 5
+Player 3 Score: 2
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 60
+Player 2 Score: 0
+Player 3 Score: 2
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 5
+2: bought Ambassador
+2: end turn
+Player 0 Score: 4
+Player 1 Score: 60
+Player 2 Score: 0
+Player 3 Score: 3
+3: Embargo played from position 1
+Embargo played.
+Player 4 Gold: 5
+3: bought Embargo
+3: end turn
+Player 0 Score: 2
+Player 1 Score: 60
+Player 2 Score: 0
+Player 3 Score: 4
+0: Outpost played from position 3
+Outpost played.
+Player 4 Gold: 2
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 6
+Player 2 Score: 0
+Player 3 Score: 4
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 7
+Player 2 Score: 0
+Player 3 Score: 4
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 5
+2: bought Ambassador
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 7
+Player 2 Score: 3
+Player 3 Score: 4
+3: bought province
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 7
+Player 2 Score: 3
+Player 3 Score: 11
+0: bought gold
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 8
+Player 2 Score: 3
+Player 3 Score: 11
+1: Treasure Map played from position 4
+Treasure Map played.
+Player 4 Gold: 5
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 15
+Player 2 Score: 6
+Player 3 Score: 11
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 1
+2: end turn
+Player 0 Score: 4
+Player 1 Score: 15
+Player 2 Score: 6
+Player 3 Score: 2
+3: bought gold
+3: end turn
+Player 0 Score: 4
+Player 1 Score: 15
+Player 2 Score: 6
+Player 3 Score: 9
+0: bought gold
+0: end turn
+Player 0 Score: 5
+Player 1 Score: 33
+Player 2 Score: 6
+Player 3 Score: 9
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 5
+Player 1 Score: 51
+Player 2 Score: 6
+Player 3 Score: 9
+2: Ambassador played from position 4
+Ambassador played.
+Player 4 Gold: 3
+2: bought silver
+2: end turn
+Player 0 Score: 5
+Player 1 Score: 51
+Player 2 Score: 3
+Player 3 Score: 9
+3: Embargo played from position 3
+Embargo played.
+Player 4 Gold: 7
+3: bought gold
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 51
+Player 2 Score: 3
+Player 3 Score: 9
+0: bought gold
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 58
+Player 2 Score: 3
+Player 3 Score: 9
+1: bought province
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 71
+Player 2 Score: 1
+Player 3 Score: 9
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 71
+Player 2 Score: 1
+Player 3 Score: 9
+3: bought province
+3: end turn
+Player 0 Score: 3
+Player 1 Score: 71
+Player 2 Score: 1
+Player 3 Score: 16
+0: bought gold
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 72
+Player 2 Score: 1
+Player 3 Score: 16
+1: Treasure Map played from position 0
+Treasure Map played.
+Player 4 Gold: 7
+1: bought gold
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 68
+Player 2 Score: 1
+Player 3 Score: 16
+2: Ambassador played from position 2
+Ambassador played.
+Player 4 Gold: 4
+2: bought Ambassador
+2: end turn
+Player 0 Score: 4
+Player 1 Score: 68
+Player 2 Score: 3
+Player 3 Score: 7
+3: bought gold
+3: end turn
+Player 0 Score: 5
+Player 1 Score: 68
+Player 2 Score: 3
+Player 3 Score: 7
+0: bought gold
+0: end turn
+Player 0 Score: 4
+Player 1 Score: 1
+Player 2 Score: 3
+Player 3 Score: 7
+1: Treasure Map played from position 3
+Treasure Map played.
+Player 4 Gold: 7
+1: bought gold
+1: end turn
+Player 0 Score: 4
+Player 1 Score: 8
+Player 2 Score: 3
+Player 3 Score: 7
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 7
+2: bought gold
+2: end turn
+Player 0 Score: 4
+Player 1 Score: 8
+Player 2 Score: 3
+Player 3 Score: 14
+3: bought gold
+3: end turn
+Player 0 Score: 1
+Player 1 Score: 8
+Player 2 Score: 3
+Player 3 Score: 15
+0: bought gold
+0: end turn
+Player 0 Score: 2
+Player 1 Score: 21
+Player 2 Score: 3
+Player 3 Score: 15
+1: bought Treasure Map
+1: end turn
+Player 0 Score: 2
+Player 1 Score: 33
+Player 2 Score: 5
+Player 3 Score: 15
+2: Ambassador played from position 4
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 2
+Player 1 Score: 33
+Player 2 Score: 6
+Player 3 Score: 16
+3: bought province
+3: end turn
+Player 0 Score: 2
+Player 1 Score: 33
+Player 2 Score: 6
+Player 3 Score: 29
+0: bought province
+0: end turn
+Player 0 Score: 9
+Player 1 Score: 33
+Player 2 Score: 6
+Player 3 Score: 29
+1: Treasure Map played from position 2
+Treasure Map played.
+Player 4 Gold: 8
+1: bought province
+1: end turn
+Player 0 Score: 9
+Player 1 Score: 45
+Player 2 Score: 1
+Player 3 Score: 29
+2: Ambassador played from position 3
+Ambassador played.
+Player 4 Gold: 2
+2: end turn
+Player 0 Score: 9
+Player 1 Score: 45
+Player 2 Score: 2
+Player 3 Score: 29
+3: bought province
+3: end turn
+Player 0 Score: 10
+Player 1 Score: 45
+Player 2 Score: 2
+Player 3 Score: 35
+Finished game.
+Player 0: 10
+Player 1: 45
+Player 2: 2
+Player 3: 35
