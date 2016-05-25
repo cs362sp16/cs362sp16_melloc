@@ -90,5 +90,5 @@ myTestRandomAdv:
 	./randomtestadventurer 42 > randomtestadventurer.out
 	gcov -f cardEffects.c >> randomtestadventurer.out
 
-testDominion: dominion.o testdominion.c
+testdominion: dominion.o testdominion.c
 	gcc -o testdominion testdominion.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
