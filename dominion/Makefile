@@ -35,11 +35,10 @@ cardtests: dominion.o cardtest1.c cardtest2.c cardtest3.c cardtest4.c
 	gcc -o cardtest3 cardtest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 	gcc -o cardtest4 cardtest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 
-randomtestcards: dominion.o randomtestcard1.c randomtestcard2.c randomtestcard3.c randomtestcard4.c
+randomtestcards: dominion.o randomtestcard1.c randomtestcard2.c randomtestadventurer.c
 	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o randomtestcard3 randomtestcard3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o randomtestcard4 randomtestcard4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno

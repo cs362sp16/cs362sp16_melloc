@@ -40,9 +40,9 @@ int main(int argc, char *argv[]) {
                 int startingHand = numHandCards(&g);
                 int startingDeck = g.deckCount[g.whoseTurn];
 
-                myassert(cardEffect(adventurer, 0, 0, 0, &g, 0, 0), "Adventurer returned the wrong value.");
+                myassert(!cardEffect(adventurer, 0, 0, 0, &g, 0, 0), "Adventurer returned the wrong value.");
 
-                myassert(numHandCards(&g) == startingHand + 2, "Wrong number of treasure cards drawn by adventurer.");
+                myassert(numHandCards(&g) == startingHand + 1, "Wrong number of treasure cards drawn by adventurer.");
 
                 myassert(g.deckCount[g.whoseTurn] == startingDeck - 2, "Wrong number of treasure cards taken from deck by adventurer.");
 

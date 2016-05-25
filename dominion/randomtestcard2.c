@@ -33,14 +33,17 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < numTests; i++) {
                 initializeGame(numPlayers, k, seed, &g);
 
-                g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
                 g.handCount[g.whoseTurn] = rand() % MAX_HAND;
+                g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                while(g.deckCount[g.whoseTurn] < 2) {
+                  g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                }
 
                 int startingHand = numHandCards(&g);
 
-                myassert(cardEffect(steward, 1, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
+                myassert(!cardEffect(steward, 1, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
 
-                myassert(numHandCards(&g) == startingHand + 2, "Wrong number of cards drawn by steward.");
+                myassert(numHandCards(&g) == startingHand + 1, "Wrong number of cards drawn by steward.");
 
                 initializeGame(numPlayers, k, seed, &g);
 
@@ -49,7 +52,7 @@ int main(int argc, char *argv[]) {
 
                 int startingCoins = g.coins;
 
-                myassert(cardEffect(steward, 2, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
+                myassert(!cardEffect(steward, 2, 0, 0, &g, 0, 0), "Steward returned the wrong value.");
 
                 myassert(g.coins == startingCoins + 2, "Wrong number of coins gained by steward.");
 
@@ -60,7 +63,7 @@ int main(int argc, char *argv[]) {
 
                 startingHand = numHandCards(&g);
 
-                myassert(cardEffect(steward, 3, 1, 2, &g, 0, 0), "Steward returned the wrong value.");
+                myassert(!cardEffect(steward, 3, 1, 2, &g, 0, 0), "Steward returned the wrong value.");
 
                 myassert(numHandCards(&g) == startingHand - 3, "Wrong number of cards discarded by steward.");
 
