@@ -1,0 +1,45 @@
+For my testing purposes, I used the dominion implementation of Paul Lantow,
+which you can find at:
+https://github.com/cs362sp16/cs362sp16_lantowp/tree/master/dominion
+
+I placed Paul's implementation in a subfolder of my project,
+at lantowp_dominion. After doing this, I ran my diffdominion.py like so:
+
+  python diffdominion.py . lantowp_dominion 42
+
+The . being my current dominion directory, and the 42 being the starting seed.
+With the seed of 42, I saw no difference between implementations. I got this
+output after both out1 and ou2 were compared:
+
+  LENGTH /Users/christianmello/Code/cs362sp16_melloc/dominion/out1 353
+  LENGTH /Users/christianmello/Code/cs362sp16_melloc/dominion/out2 353
+
+With out1 being my dominion implementation and out2 being Paul's.
+
+The coverage for this run was 50.57% for my imlementation and 46.46% for Paul's
+implementation.
+
+It wasn't until I tried out a seed of 512 that I got anything close to a
+difference in output.
+
+  LENGTH /Users/christianmello/Code/cs362sp16_melloc/dominion/out1 395
+  LENGTH /Users/christianmello/Code/cs362sp16_melloc/dominion/out2 784
+  MISMATCH AT LINE 83
+  /Users/christianmello/Code/cs362sp16_melloc/dominion/out1 Player 3 Gold: 3
+  /Users/christianmello/Code/cs362sp16_melloc/dominion/out2 Player 3 Gold: 4
+  PRIOR TO DIVERGENCE:
+  /Users/christianmello/Code/cs362sp16_melloc/dominion/out1 Remodel played.
+  /Users/christianmello/Code/cs362sp16_melloc/dominion/out2 Remodel played.
+
+After that divergence, my unix diff of the two files couldn't be more different.
+
+Seeing that these two implementations have different outputs should, in theory,
+be helpful in figuring out the one that has bugs, but in reality, there is know
+way to tell offhand which implementation of dominion here has the correct
+implementation. This is absolutely not an ideal case in differential testing.
+
+As far as coverage goes for this run, the 512 seed run of dominion got 48.08% for me and
+46.31% for Paul's implementation.
+
+Sadly, I wasn't able to get the full 60% coverage in any test that I ran and
+documented. Better luck next time I guess.
