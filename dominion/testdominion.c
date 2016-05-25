@@ -88,37 +88,31 @@ int main (int argc, char** argv) {
             cardFocus[i] = cardIDontKnowAnymore;
           } else if(i == 1) {
             while(cardIDontKnowAnymore == cardFocus[0]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             cardFocus[i] = cardIDontKnowAnymore;
           } else if(i == 2) {
             while(cardIDontKnowAnymore == cardFocus[0]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             while(cardIDontKnowAnymore == cardFocus[1]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             cardFocus[i] = cardIDontKnowAnymore;
           } else if(i == 3) {
             while(cardIDontKnowAnymore == cardFocus[0]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             while(cardIDontKnowAnymore == cardFocus[1]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             while(cardIDontKnowAnymore == cardFocus[2]) {
-              printf("Collision!\n");
               cardIDontKnowAnymore = rand() % 10;
             }
             cardFocus[i] = cardIDontKnowAnymore;
           }
 
-          printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
+          // printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
         }
 
         while (!isGameOver(p)) {
