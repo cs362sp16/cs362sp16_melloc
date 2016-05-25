@@ -23,6 +23,24 @@ all: playdom player
 clean:
 	rm -rf *.o playdom.exe playdom testdominion test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
 
+unittests: dominion.o unittest1.c unittest2.c unittest3.c unittest4.c
+	gcc -o unittest1 unittest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest2 unittest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest3 unittest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest4 unittest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+
+cardtests: dominion.o cardtest1.c cardtest2.c cardtest3.c cardtest4.c
+	gcc -o cardtest1 cardtest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest2 cardtest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest3 cardtest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest4 cardtest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+
+randomtestcards: dominion.o randomtestcard1.c randomtestcard2.c randomtestcard3.c randomtestcard4.c
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard3 randomtestcard3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard4 randomtestcard4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c unittest1.c rngs.c cardEffects.c -o unittest1 -lm -g

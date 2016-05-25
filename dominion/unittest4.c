@@ -26,7 +26,7 @@ int main() {
 
   initializeGame(2, k, 5, &g);
 
-  myassert(isGameOver(&g), "isGameOver returned game over on start.");
+  myassert(!isGameOver(&g), "isGameOver returned game over on start.");
 
   g.supplyCount[province] = 0;
 

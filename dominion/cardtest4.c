@@ -29,11 +29,11 @@ int main() {
   int startingHand = numHandCards(&g);
   int startingActions = g.numActions;
 
-  myassert(cardEffect(village, 0, 0, 0, &g, 0, 0), "Village returned the wrong value.");
+  myassert(!cardEffect(village, 0, 0, 0, &g, 0, 0), "Village returned the wrong value.");
 
-  myassert(numHandCards(&g) == startingHand + 1, "Wrong number of cards drawn by village.");
+  myassert(numHandCards(&g) == startingHand, "Wrong number of cards drawn by village.");
 
-  myassert(g.numActions == startingActions + 2, "Wrong number of cards drawn by village.");
+  myassert(g.numActions == startingActions + 2, "Wrong number of actions added by village.");
 
   checkasserts();
 }
