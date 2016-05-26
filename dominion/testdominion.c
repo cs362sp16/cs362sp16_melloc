@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "rngs.h"
 #include <stdlib.h>
+#include "interface.h"
 
 const char* getCardName(enum CARD card)
 {
@@ -28,6 +29,7 @@ const char* getCardName(enum CARD card)
         case salvager: return "Salvager";
         case sea_hag: return "Sea Hag";
         case treasure_map: return "Treasure Map";
+        default: return "?";
         }
 }
 
@@ -38,30 +40,12 @@ int main (int argc, char** argv) {
 
         srand(gameSeed);
 
-        int cards[20] = { adventurer, council_room, feast, gardens, mine,
-                          remodel, smithy, village, baron, great_hall,
-                          minion, steward, tribute, ambassador, cutpurse,
-                          embargo, outpost, salvager, sea_hag, treasure_map };
-        int cardsPicked[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         int k[10];
-        int currentRand;
-        int cardChosen;
+
         int e;
 
-        for(int i = 0; i < 10; i++) {
-                cardChosen = 0;
+        selectKingdomCards(gameSeed, k);
 
-                while (cardChosen == 0) {
-                        currentRand = rand() % 20;
-                        if(cardsPicked[currentRand] == 0) {
-                                k[i] = cards[currentRand];
-                                printf("Card %d: %s\n", i + 1, getCardName(cards[currentRand]));
-                                cardChosen = 1;
-                                cardsPicked[currentRand] = 1;
-                        }
-                }
-        }
         printf("\n");
 
         int playerNum = (rand() % 3) + 2;
@@ -69,6 +53,8 @@ int main (int argc, char** argv) {
         printf ("Starting game.\n");
 
         initializeGame(playerNum, k, gameSeed, p);
+
+        printSupply(&G);
 
         int money = 0;
         int cardPos[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
@@ -112,7 +98,7 @@ int main (int argc, char** argv) {
                         cardFocus[i] = cardIDontKnowAnymore;
                 }
 
-                // printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
+                printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
         }
 
         while (!isGameOver(p)) {
