@@ -33,18 +33,23 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < numTests; i++) {
                 initializeGame(numPlayers, k, seed, &g);
 
-                g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
-                g.discardCount[g.whoseTurn] = rand() % MAX_DECK;
-                g.handCount[g.whoseTurn] = rand() % MAX_HAND;
+                // g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                // g.discardCount[g.whoseTurn] = rand() % MAX_DECK;
+                // g.handCount[g.whoseTurn] = rand() % MAX_HAND;
 
                 int startingHand = numHandCards(&g);
                 int startingDeck = g.deckCount[g.whoseTurn];
 
-                myassert(!cardEffect(adventurer, 0, 0, 0, &g, 0, 0), "Adventurer returned the wrong value.");
+                myassert(!cardEffect(adventurer, 0, 0, 0, &g, 0, 0),
+                         "Adventurer returned the wrong value.");
 
-                myassert(numHandCards(&g) == startingHand + 1, "Wrong number of treasure cards drawn by adventurer.");
+                myassert(numHandCards(&g) == startingHand + 2,
+                         "Wrong number of treasure cards drawn by adventurer.");
 
-                myassert(g.deckCount[g.whoseTurn] == startingDeck - 2, "Wrong number of treasure cards taken from deck by adventurer.");
+                int endingDiscard = g.discardCount[g.whoseTurn];
+
+                myassert(g.deckCount[g.whoseTurn] == startingDeck - endingDiscard - 2,
+                         "Wrong number of treasure cards taken from deck by adventurer.");
 
                 seed++;
         }
