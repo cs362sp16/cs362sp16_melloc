@@ -42,7 +42,7 @@ int main (int argc, char** argv) {
 
         int k[10];
 
-        int e;
+        int e = 0;
 
         selectKingdomCards(gameSeed, k);
 
@@ -54,7 +54,7 @@ int main (int argc, char** argv) {
 
         initializeGame(playerNum, k, gameSeed, p);
 
-        printSupply(&G);
+        printSupply(p);
 
         int money = 0;
         int cardPos[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
@@ -129,23 +129,7 @@ int main (int argc, char** argv) {
                                cardPos[cardFocus[whoseTurn(p)]]);
                         playCard(cardPos[cardFocus[whoseTurn(p)]], -1, -1, -1, p);
                         printf("%s played.\n", getCardName(cardObsess));
-                        money = 0;
-                        i=0;
-                        while(i<numHandCards(p)) {
-                                if (handCard(i, p) == copper) {
-                                        playCard(i, -1, -1, -1, p);
-                                        money++;
-                                }
-                                else if (handCard(i, p) == silver) {
-                                        playCard(i, -1, -1, -1, p);
-                                        money += 2;
-                                }
-                                else if (handCard(i, p) == gold) {
-                                        playCard(i, -1, -1, -1, p);
-                                        money += 3;
-                                }
-                                i++;
-                        }
+                        money = countHandCoins(whoseTurn(p), p);
                         printf("Player %d Gold: %d\n", e, money);
                 }
 
@@ -157,11 +141,10 @@ int main (int argc, char** argv) {
                         printf("%d: bought gold\n", whoseTurn(p));
                         buyCard(gold, p);
                 }
-                else if ((money >= 4)) { // && (numSmithies < 2)) {
+                else if ((money >= 4)) {
                         printf("%d: bought %s\n", whoseTurn(p),
                                getCardName(cardObsess));
                         buyCard(cardObsess, p);
-                        // numSmithies++;
                 }
                 else if (money >= 3) {
                         printf("%d: bought silver\n", whoseTurn(p));
@@ -172,17 +155,13 @@ int main (int argc, char** argv) {
                 endTurn(p);
 
 
-                for(e = 0; e < playerNum; e++) {
-                        printf("Player %d Score: %d\n", e, scoreFor(e, p));
-                }
+                printScores(p);
 
         }
 
         printf ("Finished game.\n");
 
-        for(e = 0; e < playerNum; e++) {
-                printf("Player %d: %d\n", e, scoreFor(e, p));
-        }
+        printScores(p);
 
         return 0;
 }
