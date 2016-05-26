@@ -6,29 +6,29 @@
 
 const char* getCardName(enum CARD card)
 {
-   switch (card)
-   {
-      case adventurer: return "Adventurer";
-      case council_room: return "Council Room";
-      case feast: return "Feast";
-      case gardens: return "Gardens";
-      case mine: return "Mine";
-      case remodel: return "Remodel";
-      case smithy: return "Smithy";
-      case village: return "Village";
-      case baron: return "Baron";
-      case great_hall: return "Great Hall";
-      case minion: return "Minion";
-      case steward: return "Steward";
-      case tribute: return "Tribute";
-      case ambassador: return "Ambassador";
-      case cutpurse: return "Cutpurse";
-      case embargo: return "Embargo";
-      case outpost: return "Outpost";
-      case salvager: return "Salvager";
-      case sea_hag: return "Sea Hag";
-      case treasure_map: return "Treasure Map";
-   }
+        switch (card)
+        {
+        case adventurer: return "Adventurer";
+        case council_room: return "Council Room";
+        case feast: return "Feast";
+        case gardens: return "Gardens";
+        case mine: return "Mine";
+        case remodel: return "Remodel";
+        case smithy: return "Smithy";
+        case village: return "Village";
+        case baron: return "Baron";
+        case great_hall: return "Great Hall";
+        case minion: return "Minion";
+        case steward: return "Steward";
+        case tribute: return "Tribute";
+        case ambassador: return "Ambassador";
+        case cutpurse: return "Cutpurse";
+        case embargo: return "Embargo";
+        case outpost: return "Outpost";
+        case salvager: return "Salvager";
+        case sea_hag: return "Sea Hag";
+        case treasure_map: return "Treasure Map";
+        }
 }
 
 int main (int argc, char** argv) {
@@ -81,44 +81,44 @@ int main (int argc, char** argv) {
         int cardObsess;
 
         for(i = 0; i < playerNum; i++) {
-          pleaseKillMe = 0;
-          sameCard = 0;
-          cardIDontKnowAnymore = rand() % 10;
-          if(i == 0) {
-            cardFocus[i] = cardIDontKnowAnymore;
-          } else if(i == 1) {
-            while(cardIDontKnowAnymore == cardFocus[0]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            cardFocus[i] = cardIDontKnowAnymore;
-          } else if(i == 2) {
-            while(cardIDontKnowAnymore == cardFocus[0]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            while(cardIDontKnowAnymore == cardFocus[1]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            cardFocus[i] = cardIDontKnowAnymore;
-          } else if(i == 3) {
-            while(cardIDontKnowAnymore == cardFocus[0]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            while(cardIDontKnowAnymore == cardFocus[1]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            while(cardIDontKnowAnymore == cardFocus[2]) {
-              cardIDontKnowAnymore = rand() % 10;
-            }
-            cardFocus[i] = cardIDontKnowAnymore;
-          }
+                pleaseKillMe = 0;
+                sameCard = 0;
+                cardIDontKnowAnymore = rand() % 10;
+                if(i == 0) {
+                        cardFocus[i] = cardIDontKnowAnymore;
+                } else if(i == 1) {
+                        while(cardIDontKnowAnymore == cardFocus[0]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        cardFocus[i] = cardIDontKnowAnymore;
+                } else if(i == 2) {
+                        while(cardIDontKnowAnymore == cardFocus[0]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        while(cardIDontKnowAnymore == cardFocus[1]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        cardFocus[i] = cardIDontKnowAnymore;
+                } else if(i == 3) {
+                        while(cardIDontKnowAnymore == cardFocus[0]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        while(cardIDontKnowAnymore == cardFocus[1]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        while(cardIDontKnowAnymore == cardFocus[2]) {
+                                cardIDontKnowAnymore = rand() % 10;
+                        }
+                        cardFocus[i] = cardIDontKnowAnymore;
+                }
 
-          // printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
+                // printf("Player %d Card Obsession: %s\n", i, getCardName(k[cardFocus[i]]));
         }
 
         while (!isGameOver(p)) {
                 money = 0;
                 for(i = 0; i < 10; i++) {
-                  cardPos[i] = -1;
+                        cardPos[i] = -1;
                 }
 
                 cardObsess = k[cardFocus[whoseTurn(p)]];
@@ -131,16 +131,16 @@ int main (int argc, char** argv) {
                         else if (handCard(i, p) == gold)
                                 money += 3;
                         for (j = 0; j < 10; j++ ) {
-                          if (handCard(i, p) == k[j]) {
-                            cardPos[j] = i;
-                          }
+                                if (handCard(i, p) == k[j]) {
+                                        cardPos[j] = i;
+                                }
                         }
                 }
 
                 if (cardPos[cardFocus[whoseTurn(p)]] != -1) {
                         printf("%d: %s played from position %d\n", whoseTurn(p),
-                            getCardName(cardObsess),
-                            cardPos[cardFocus[whoseTurn(p)]]);
+                               getCardName(cardObsess),
+                               cardPos[cardFocus[whoseTurn(p)]]);
                         playCard(cardPos[cardFocus[whoseTurn(p)]], -1, -1, -1, p);
                         printf("%s played.\n", getCardName(cardObsess));
                         money = 0;
@@ -173,7 +173,7 @@ int main (int argc, char** argv) {
                 }
                 else if ((money >= 4)) { // && (numSmithies < 2)) {
                         printf("%d: bought %s\n", whoseTurn(p),
-                            getCardName(cardObsess));
+                               getCardName(cardObsess));
                         buyCard(cardObsess, p);
                         // numSmithies++;
                 }

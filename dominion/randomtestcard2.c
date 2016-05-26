@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
                 g.handCount[g.whoseTurn] = rand() % MAX_HAND;
                 g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
                 while(g.deckCount[g.whoseTurn] < 2) {
-                  g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
+                        g.deckCount[g.whoseTurn] = rand() % MAX_DECK;
                 }
 
                 int startingHand = numHandCards(&g);
