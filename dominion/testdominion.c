@@ -58,8 +58,7 @@ int main (int argc, char** argv) {
 
         int money = 0;
         int cardPos[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
-        int i=0;
-        int j;
+        int i = 0;
         int sameCard;
         int cardIDontKnowAnymore;
         int pleaseKillMe;
@@ -102,26 +101,13 @@ int main (int argc, char** argv) {
         }
 
         while (!isGameOver(p)) {
-                money = 0;
                 for(i = 0; i < 10; i++) {
                         cardPos[i] = -1;
                 }
 
                 cardObsess = k[cardFocus[whoseTurn(p)]];
 
-                for (i = 0; i < numHandCards(p); i++) {
-                        if (handCard(i, p) == copper)
-                                money++;
-                        else if (handCard(i, p) == silver)
-                                money += 2;
-                        else if (handCard(i, p) == gold)
-                                money += 3;
-                        for (j = 0; j < 10; j++ ) {
-                                if (handCard(i, p) == k[j]) {
-                                        cardPos[j] = i;
-                                }
-                        }
-                }
+                money = countHandCoins(whoseTurn(p), p);
 
                 if (cardPos[cardFocus[whoseTurn(p)]] != -1) {
                         printf("%d: %s played from position %d\n", whoseTurn(p),
@@ -129,24 +115,20 @@ int main (int argc, char** argv) {
                                cardPos[cardFocus[whoseTurn(p)]]);
                         playCard(cardPos[cardFocus[whoseTurn(p)]], -1, -1, -1, p);
                         printf("%s played.\n", getCardName(cardObsess));
-                        money = countHandCoins(whoseTurn(p), p);
                         printf("Player %d Gold: %d\n", e, money);
                 }
 
                 if (money >= 8) {
                         printf("%d: bought province\n", whoseTurn(p));
                         buyCard(province, p);
-                }
-                else if (money >= 6) {
+                } else if (money >= 6) {
                         printf("%d: bought gold\n", whoseTurn(p));
                         buyCard(gold, p);
-                }
-                else if ((money >= 4)) {
+                } else if ((money >= getCardCost(cardObsess))) {
                         printf("%d: bought %s\n", whoseTurn(p),
                                getCardName(cardObsess));
                         buyCard(cardObsess, p);
-                }
-                else if (money >= 3) {
+                } else if (money >= 3) {
                         printf("%d: bought silver\n", whoseTurn(p));
                         buyCard(silver, p);
                 }
