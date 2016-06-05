@@ -1,0 +1,469 @@
+
+Starting game.
+#   Card          Cost   Copies
+0   Curse         0      20   
+1   Estate        2      12   
+2   Duchy         5      12   
+3   Province      8      12   
+4   Copper        0      39   
+5   Silver        3      40   
+6   Gold          6      30   
+7   Adventurer    6      10   
+10  Gardens       4      12   
+13  Smithy        4      10   
+15  Baron         4      10   
+16  Great Hall    3      12   
+20  Ambassador    3      10   
+21  Cutpurse      4      10   
+23  Outpost       5      10   
+24  Salvager      4      10   
+26  Treasure Map  4      10   
+
+Player 0 Card Obsession: Outpost
+Player 1 Card Obsession: Smithy
+Player 2 Card Obsession: Cutpurse
+0: bought silver
+0: end turn
+Player 0 has a score of 4
+Player 1 has a score of 2
+Player 2 has a score of 0
+1: bought silver
+1: end turn
+Player 0 has a score of 4
+Player 1 has a score of 3
+Player 2 has a score of 2
+2: bought silver
+2: end turn
+Player 0 has a score of 6
+Player 1 has a score of 3
+Player 2 has a score of 3
+0: bought silver
+0: end turn
+Player 0 has a score of 4
+Player 1 has a score of 4
+Player 2 has a score of 3
+1: bought Smithy
+1: end turn
+Player 0 has a score of 4
+Player 1 has a score of 4
+Player 2 has a score of 4
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 3
+Player 1 has a score of 4
+Player 2 has a score of 6
+0: bought silver
+0: end turn
+Player 0 has a score of 3
+Player 1 has a score of 1
+Player 2 has a score of 6
+1: bought silver
+1: end turn
+Player 0 has a score of 3
+Player 1 has a score of 3
+Player 2 has a score of 3
+2: end turn
+Player 0 has a score of 3
+Player 1 has a score of 3
+Player 2 has a score of 3
+0: bought Outpost
+0: end turn
+Player 0 has a score of 6
+Player 1 has a score of 5
+Player 2 has a score of 3
+1: bought silver
+1: end turn
+Player 0 has a score of 6
+Player 1 has a score of 6
+Player 2 has a score of 3
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 0
+Player 1 has a score of 6
+Player 2 has a score of 6
+0: bought Outpost
+0: end turn
+Player 0 has a score of 3
+Player 1 has a score of 0
+Player 2 has a score of 6
+1: bought gold
+1: end turn
+Player 0 has a score of 3
+Player 1 has a score of 3
+Player 2 has a score of 0
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 3
+Player 1 has a score of 3
+Player 2 has a score of 2
+0: bought gold
+0: end turn
+Player 0 has a score of 3
+Player 1 has a score of 4
+Player 2 has a score of 2
+1: bought Smithy
+1: end turn
+Player 0 has a score of 3
+Player 1 has a score of 4
+Player 2 has a score of 5
+2: end turn
+Player 0 has a score of 3
+Player 1 has a score of 4
+Player 2 has a score of 6
+0: end turn
+Player 0 has a score of 3
+Player 1 has a score of 2
+Player 2 has a score of 6
+1: bought silver
+1: end turn
+Player 0 has a score of 3
+Player 1 has a score of 2
+Player 2 has a score of 1
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 3
+Player 1 has a score of 2
+Player 2 has a score of 2
+0: bought province
+0: end turn
+Player 0 has a score of 9
+Player 1 has a score of 3
+Player 2 has a score of 2
+1: bought Smithy
+1: end turn
+Player 0 has a score of 9
+Player 1 has a score of 4
+Player 2 has a score of 4
+2: end turn
+Player 0 has a score of 9
+Player 1 has a score of 4
+Player 2 has a score of 6
+0: bought gold
+0: end turn
+Player 0 has a score of 4
+Player 1 has a score of 4
+Player 2 has a score of 6
+1: bought gold
+1: end turn
+Player 0 has a score of 4
+Player 1 has a score of -2
+Player 2 has a score of 0
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 1
+Player 1 has a score of -2
+Player 2 has a score of 1
+0: bought gold
+0: end turn
+Player 0 has a score of 1
+Player 1 has a score of 1
+Player 2 has a score of 1
+1: bought gold
+1: end turn
+Player 0 has a score of 1
+Player 1 has a score of 2
+Player 2 has a score of 4
+2: end turn
+Player 0 has a score of 8
+Player 1 has a score of 2
+Player 2 has a score of 6
+0: bought Outpost
+0: end turn
+Player 0 has a score of 10
+Player 1 has a score of 2
+Player 2 has a score of 6
+1: bought Smithy
+1: end turn
+Player 0 has a score of 10
+Player 1 has a score of 3
+Player 2 has a score of 6
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 11
+Player 1 has a score of 3
+Player 2 has a score of 4
+0: bought silver
+0: end turn
+Player 0 has a score of 17
+Player 1 has a score of 4
+Player 2 has a score of 4
+1: bought gold
+1: end turn
+Player 0 has a score of 17
+Player 1 has a score of 5
+Player 2 has a score of 0
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 0
+Player 1 has a score of 5
+Player 2 has a score of 2
+0: bought gold
+0: end turn
+Player 0 has a score of 1
+Player 1 has a score of 1
+Player 2 has a score of 2
+1: bought Smithy
+1: end turn
+Player 0 has a score of 1
+Player 1 has a score of 1
+Player 2 has a score of 3
+2: end turn
+Player 0 has a score of 8
+Player 1 has a score of 1
+Player 2 has a score of 4
+0: bought silver
+0: end turn
+Player 0 has a score of 9
+Player 1 has a score of 3
+Player 2 has a score of 4
+1: bought Smithy
+1: end turn
+Player 0 has a score of 9
+Player 1 has a score of 3
+Player 2 has a score of 6
+2: end turn
+Player 0 has a score of 10
+Player 1 has a score of 3
+Player 2 has a score of 6
+0: bought province
+0: end turn
+Player 0 has a score of 23
+Player 1 has a score of 3
+Player 2 has a score of 6
+1: bought gold
+1: end turn
+Player 0 has a score of 23
+Player 1 has a score of 5
+Player 2 has a score of 2
+2: end turn
+Player 0 has a score of 24
+Player 1 has a score of 5
+Player 2 has a score of 3
+0: bought silver
+0: end turn
+Player 0 has a score of 18
+Player 1 has a score of 5
+Player 2 has a score of 3
+1: bought gold
+1: end turn
+Player 0 has a score of 18
+Player 1 has a score of -1
+Player 2 has a score of 3
+2: end turn
+Player 0 has a score of 1
+Player 1 has a score of -1
+Player 2 has a score of 3
+0: bought province
+0: end turn
+Player 0 has a score of 14
+Player 1 has a score of 1
+Player 2 has a score of 3
+1: bought gold
+1: end turn
+Player 0 has a score of 14
+Player 1 has a score of 1
+Player 2 has a score of 3
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 20
+Player 1 has a score of 1
+Player 2 has a score of 5
+0: bought silver
+0: end turn
+Player 0 has a score of 21
+Player 1 has a score of 2
+Player 2 has a score of 5
+1: bought gold
+1: end turn
+Player 0 has a score of 21
+Player 1 has a score of 3
+Player 2 has a score of 1
+2: end turn
+Player 0 has a score of 21
+Player 1 has a score of 3
+Player 2 has a score of 2
+0: bought province
+0: end turn
+Player 0 has a score of 33
+Player 1 has a score of 3
+Player 2 has a score of 2
+1: bought gold
+1: end turn
+Player 0 has a score of 33
+Player 1 has a score of 3
+Player 2 has a score of 3
+2: bought silver
+2: end turn
+Player 0 has a score of 34
+Player 1 has a score of 3
+Player 2 has a score of 4
+0: bought Outpost
+0: end turn
+Player 0 has a score of 35
+Player 1 has a score of 4
+Player 2 has a score of 4
+1: bought Smithy
+1: end turn
+Player 0 has a score of 35
+Player 1 has a score of 6
+Player 2 has a score of 4
+2: bought silver
+2: end turn
+Player 0 has a score of 42
+Player 1 has a score of 6
+Player 2 has a score of 4
+0: bought gold
+0: end turn
+Player 0 has a score of 36
+Player 1 has a score of 6
+Player 2 has a score of 4
+1: bought gold
+1: end turn
+Player 0 has a score of 36
+Player 1 has a score of 0
+Player 2 has a score of 2
+2: end turn
+Player 0 has a score of 1
+Player 1 has a score of 0
+Player 2 has a score of 2
+0: bought silver
+0: end turn
+Player 0 has a score of 8
+Player 1 has a score of 0
+Player 2 has a score of 2
+1: bought gold
+1: end turn
+Player 0 has a score of 8
+Player 1 has a score of 1
+Player 2 has a score of 2
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 9
+Player 1 has a score of 1
+Player 2 has a score of 3
+0: bought province
+0: end turn
+Player 0 has a score of 27
+Player 1 has a score of 1
+Player 2 has a score of 3
+1: bought province
+1: end turn
+Player 0 has a score of 27
+Player 1 has a score of 7
+Player 2 has a score of 4
+2: end turn
+Player 0 has a score of 33
+Player 1 has a score of 7
+Player 2 has a score of 4
+0: bought Outpost
+0: end turn
+Player 0 has a score of 39
+Player 1 has a score of 7
+Player 2 has a score of 4
+1: bought Smithy
+1: end turn
+Player 0 has a score of 39
+Player 1 has a score of 9
+Player 2 has a score of 4
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 45
+Player 1 has a score of 9
+Player 2 has a score of 5
+0: bought Outpost
+0: end turn
+Player 0 has a score of 45
+Player 1 has a score of 11
+Player 2 has a score of 5
+1: bought silver
+1: end turn
+Player 0 has a score of 45
+Player 1 has a score of 11
+Player 2 has a score of 1
+2: end turn
+Player 0 has a score of 51
+Player 1 has a score of 11
+Player 2 has a score of 3
+0: bought province
+0: end turn
+Player 0 has a score of 59
+Player 1 has a score of 11
+Player 2 has a score of 3
+1: bought province
+1: end turn
+Player 0 has a score of 59
+Player 1 has a score of 17
+Player 2 has a score of 3
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 66
+Player 1 has a score of 17
+Player 2 has a score of 3
+0: bought gold
+0: end turn
+Player 0 has a score of 60
+Player 1 has a score of 18
+Player 2 has a score of 3
+1: bought province
+1: end turn
+Player 0 has a score of 60
+Player 1 has a score of 18
+Player 2 has a score of 3
+2: end turn
+Player 0 has a score of 0
+Player 1 has a score of 18
+Player 2 has a score of 3
+0: bought province
+0: end turn
+Player 0 has a score of 7
+Player 1 has a score of 0
+Player 2 has a score of 3
+1: bought province
+1: end turn
+Player 0 has a score of 7
+Player 1 has a score of 13
+Player 2 has a score of 4
+2: bought silver
+2: end turn
+Player 0 has a score of 19
+Player 1 has a score of 13
+Player 2 has a score of 5
+0: bought silver
+0: end turn
+Player 0 has a score of 20
+Player 1 has a score of 14
+Player 2 has a score of 5
+1: bought gold
+1: end turn
+Player 0 has a score of 20
+Player 1 has a score of 20
+Player 2 has a score of 2
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 32
+Player 1 has a score of 20
+Player 2 has a score of 2
+0: bought gold
+0: end turn
+Player 0 has a score of 39
+Player 1 has a score of 20
+Player 2 has a score of 2
+1: bought Smithy
+1: end turn
+Player 0 has a score of 39
+Player 1 has a score of 26
+Player 2 has a score of 2
+2: bought Cutpurse
+2: end turn
+Player 0 has a score of 45
+Player 1 has a score of 26
+Player 2 has a score of 2
+0: bought province
+0: end turn
+Player 0 has a score of 63
+Player 1 has a score of 27
+Player 2 has a score of 2
+Finished game.
+Player 0 has a score of 63
+Player 1 has a score of 27
+Player 2 has a score of 2
