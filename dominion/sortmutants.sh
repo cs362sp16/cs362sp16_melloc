@@ -25,7 +25,7 @@ for i in $(ls $MUT_DIR/$MUT_FILE_SCHEME); do
   make -B $MAKE_CHOICE > /dev/null 2>&1
   if [[ $? != 0 ]]; then
     cp $i $NON_COMPILED_DIR
-    echo $i killed!
+    echo $i failed to compile!
   else
     cp $i $COMPILED_DIR
   fi
