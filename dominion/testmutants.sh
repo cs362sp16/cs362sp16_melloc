@@ -20,6 +20,7 @@ mkdir $KILLED_DIR
 cp dominion.c dominion.c.bak
 
 for i in $(ls $MUT_DIR/$MUT_FILE_SCHEME); do
+  make clean
   KILL_MUTANT=no
 
   cp $i dominion.c
@@ -28,8 +29,8 @@ for i in $(ls $MUT_DIR/$MUT_FILE_SCHEME); do
 
   # UNIT TESTS
   make -B unittests > /dev/null 2>&1
-  for i in $(ls unittest*.out); do
-    ./$i > /dev/null 2>&1
+  for u in $(ls unittest*.out); do
+    ./$u > /dev/null 2>&1
     if [[ $? != 0 ]]; then
       KILL_MUTANT=yes
       echo Fail on unit test!
@@ -38,8 +39,8 @@ for i in $(ls $MUT_DIR/$MUT_FILE_SCHEME); do
 
   # CARD TESTS
   make -B cardtests > /dev/null 2>&1
-  for i in $(ls cardtest*.out); do
-    ./$i > /dev/null 2>&1
+  for c in $(ls cardtest*.out); do
+    ./$c > /dev/null 2>&1
     if [[ $? != 0 ]]; then
       KILL_MUTANT=yes
       echo Fail on card test!
@@ -48,8 +49,8 @@ for i in $(ls $MUT_DIR/$MUT_FILE_SCHEME); do
 
   # RANDOM TESTS
   make -B randomtestcards > /dev/null 2>&1
-  for i in $(ls randomtest*.out); do
-    ./$i > /dev/null 2>&1
+  for r in $(ls randomtest*.out); do
+    ./$r 42 > /dev/null 2>&1
     if [[ $? != 0 ]]; then
       KILL_MUTANT=yes
       echo Fail on random test!
