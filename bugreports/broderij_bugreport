@@ -1,0 +1,19 @@
+BUG REPORT #2
+
+There is a bug in the village card in the cardEffect function in dominion.c
+
+Village is giving the wrong number of actions.
+
+Severity: Medium. Causes incorrect gameplay, but does not interrupt the game.
+
+Priority: Low. Problem only occurs if this card is played.
+
+BUG REPORT #3
+
+There is a bug in the ambassador card in the cardEffect function in dominion.c
+
+In certain cases when running tests, the ambassador card has an infinite loop.
+
+Severity: High. Causes incorrect gameplay, interrupts the game.
+
+Priority: Medium. Problem only occurs if this card is played.

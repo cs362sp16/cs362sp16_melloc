@@ -1,0 +1,33 @@
+I chose to do mutation testing on my implementation of dominion. This actually
+proved to be a much more difficult choice than I thought and took an immense
+amount of time to implement.
+
+The first thing I did was found a mutation tool called cmutate, provided by my
+professor via a friendly github repository. Once I figured out how to get it to
+work on my system (I had to edit the original script, which you can find in
+generateMutants.sh in my mutants folder) I generated mutants for every line of
+the dominion.c file, including extra variation, and got 2096 mutants. You can
+find the original mutants in the mutants/dominionc directory in my dominion
+folder.
+
+The next thing I did was create a script to compile the mutants, throwing out
+the ones that wouldn't compile into a separate folder and throwing the
+compilable ones into another. This script is called sortmutants.sh in my
+dominion folder. This took awhile to get right, and a very VERY long time to
+compile all of the 2096 mutants. It threw mutants out if make returned with
+anything other than 0. You can find the compiled mutants in the mutants/compiled
+and the non-compiable mutants in the mutants/not_compiled folder in the dominion
+directory. I came up with 1997 compiled mutants and 99 that would not compile.
+
+The next thing I did was create the proper mutant testing script. You can find
+this as testmutants.sh. What this script did is compile every one of the mutants
+in the mutants/compiled folder and ran all of my tests against them. It ran my
+unit tests, card tests, and random test cards and checked if each test ended
+with a 0 return value. The next thing it ran was testdominion. Before running
+these tests, a clean run of testdominion was stored, and each mutant stored
+another output of testdominion, and the two files were checked with a diff
+command to check for changes. If diff returned 0, the minion was spared.
+
+With the testdominion script, I was actually able to kill all 1997 of the
+compiled mutants. You can find the killed mutants in the mutants/killed folder
+of the dominion folder.

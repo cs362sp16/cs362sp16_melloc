@@ -1,0 +1,9 @@
+BUG REPORT #1
+
+There is a bug in the buyCard() function in dominion.c
+
+Buycard is not checking if it is in the right phase before buying cards.
+
+Severity: High. Causes incorrect gameplay, and affects every turn of the game.
+
+Priority: High. Problem occurs every turn.
