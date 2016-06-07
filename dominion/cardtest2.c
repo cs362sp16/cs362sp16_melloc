@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("STEWARD TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main() {
@@ -48,5 +50,5 @@ int main() {
 
         myassert(numHandCards(&g) == startingHand - 3, "Wrong number of cards discarded by steward.");
 
-        checkasserts();
+        return checkasserts();
 }

@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("SMITHY TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main() {
@@ -32,5 +34,5 @@ int main() {
 
         myassert(numHandCards(&g) == startingHand + 2, "Wrong number of cards drawn by smithy.");
 
-        checkasserts();
+        return checkasserts();
 }

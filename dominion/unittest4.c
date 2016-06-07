@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("ISGAMEOVER TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main() {
@@ -40,5 +42,5 @@ int main() {
 
         myassert(isGameOver(&g), "isGameOver didn't account for 3 empty supply decks");
 
-        checkasserts();
+        return checkasserts();
 }

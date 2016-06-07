@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("MINION TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main() {
@@ -61,5 +63,5 @@ int main() {
 
         myassert(numHandCards(&g) == 4, "Wrong number of cards redrawn by minion.");
 
-        checkasserts();
+        return checkasserts();
 }

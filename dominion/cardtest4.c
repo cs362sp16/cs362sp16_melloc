@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("VILLAGE TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main() {
@@ -35,5 +37,5 @@ int main() {
 
         myassert(g.numActions == startingActions + 2, "Wrong number of actions added by village.");
 
-        checkasserts();
+        return checkasserts();
 }

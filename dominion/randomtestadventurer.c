@@ -12,10 +12,12 @@ void myassert(int b,char* msg) {
         }
 }
 
-void checkasserts() {
+int checkasserts() {
         if (!failed) {
                 printf ("ADVENTURER TEST SUCCESSFULLY COMPLETED.\n");
+                return 0;
         }
+        return 1;
 }
 
 int main(int argc, char *argv[]) {
@@ -54,5 +56,5 @@ int main(int argc, char *argv[]) {
                 seed++;
         }
 
-        checkasserts();
+        return checkasserts();
 }
