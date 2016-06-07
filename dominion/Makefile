@@ -21,24 +21,24 @@ player: player.c interface.o
 all: playdom player
 
 clean:
-	rm -rf *.o playdom.exe playdom testdominion test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom testdominion test.exe test player unittest1.out unittest2.out unittest3.out unittest4.out cardtest1.out cardtest2.out cardtest3.out cardtest4.out randomtestcard1.out randomtestcard2.out randomtestadventurer.out player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM testdominionorig.output testdominionmutant.output
 
 unittests: dominion.o unittest1.c unittest2.c unittest3.c unittest4.c
-	gcc -o unittest1 unittest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o unittest2 unittest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o unittest3 unittest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o unittest4 unittest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest1.out unittest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest2.out unittest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest3.out unittest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o unittest4.out unittest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 
 cardtests: dominion.o cardtest1.c cardtest2.c cardtest3.c cardtest4.c
-	gcc -o cardtest1 cardtest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o cardtest2 cardtest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o cardtest3 cardtest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o cardtest4 cardtest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest1.out cardtest1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest2.out cardtest2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest3.out cardtest3.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o cardtest4.out cardtest4.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 
 randomtestcards: dominion.o randomtestcard1.c randomtestcard2.c randomtestadventurer.c
-	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
-	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard1.out randomtestcard1.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard2.out randomtestcard2.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
+	gcc -o randomtestadventurer.out randomtestadventurer.c -g dominion.o cardEffects.o rngs.o $(CFLAGS)
 
 myTest:
 	rm -f dominion.c.gcov dominion.gcda dominion.gcno
