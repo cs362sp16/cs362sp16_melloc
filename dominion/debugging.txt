@@ -1,0 +1,38 @@
+During my testing of my own dominion code, I came across a bug in the
+cardEffects.c code, specifically in the minionEffect function. When I ran my
+unittest3.out command, I came up with this output:
+
+  $ ./cardtest3.out
+  FAILED ASSERTION: Wrong number of coins gained by minion.
+
+What I found was that the number of coins gained by the minion card, which
+should be 2, had been modified, as if by mistake. It was instead adding the
+wrong amount of coins, by a large amount, at 63 coins.
+
+To fix the bug, I looked through the code, and found the offending line:
+
+  if (choice1) //+2 coins
+  {
+          state->coins = state->coins + 63;
+  }
+
+And changed it to this:
+
+  if (choice1) //+2 coins
+  {
+          state->coins = state->coins + 2;
+  }
+
+This was a pretty simple bug on first look, but upon playing an entire game of
+Dominion with this card, it would get out of hand very quickly and rack up some
+serious coins for the enterprising cheater.
+
+Once I changed the code how I listed above, the output changed to this:
+
+  $ ./cardtest3.out
+  MINION TEST SUCCESSFULLY COMPLETED.
+
+Of Agans' principles, the one this reflects is Rule 9: "If You Didn't Fix It, It
+Ain't Fixed." Once I found the cause of my bug, it wasn't enough to just fix the
+bug, but I also had to run my unit test again to make sure that I got the
+correct output, in this case without failed assertions!

@@ -163,7 +163,7 @@ int minionEffect(struct gameState *state, int handPos, int choice1, int choice2)
 
         if (choice1) //+2 coins
         {
-                state->coins = state->coins + 63;
+                state->coins = state->coins + 2;
         }
 
         else if (choice2) //discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
